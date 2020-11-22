@@ -1,0 +1,17 @@
+<h1 class="m-5">Hogwarts Houses</h1>
+
+<div class="row animated fadeIn fast ">
+
+    <div class="col-xl-3 col-md-6 col-12" *ngFor="let house of houses">
+        <div class="card mx-auto mb-4" style="width: 18rem;">
+            <div class="card-body">
+                <h2 class="card-title text-center">{{house.name}}</h2>
+                <img src="assets/img/{{house.name}}.png" class="card-img-top" alt="{{house.name}}">
+                <p class="card-text text-center">Members: <b>{{house.count}}</b> </p>
+                <a (click)="showHouse(house.name)" class="stretched-link"></a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

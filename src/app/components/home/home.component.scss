@@ -1,0 +1,14 @@
+.card {
+    transition: .5s;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+}
+
+.card:before {
+    z-index: 1;
+    transform: skewY(-5deg) scale(1.5);
+}

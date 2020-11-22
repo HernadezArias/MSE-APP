@@ -1,0 +1,28 @@
+<div class="row m-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="mx-2">Order By</li>
+            <li class="breadcrumb-item"><a [routerLink]="" (click)="orderByName()">Name</a></li>
+            <li class="breadcrumb-item"><a [routerLink]="" (click)="orderByLastName()">Last Name</a></li>
+        </ol>
+    </nav>
+</div>
+<div class="row row-cols-1 row-cols-md-3">
+    <div class="col-xl-3 col-md-4 col-sm-6 col-12 mb-4" *ngFor="let member of hogwarstsService.member">
+        <div class="card">
+            <img src="{{member.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{member.name}}</h5>
+                <p class="card-text">species: <b>{{member.species}}</b> - gender: <b>{{member.gender}}</b>
+                    <br> house: <b>{{member.house}}</b> - yearOfBirth: <b>{{member.yearOfBirth}}</b>
+                    <br> alive: <b>{{member.alive}} - eyeColour: <b>{{member.eyeColour}}</b>
+                    <br> hairColour: <b>{{member.hairColour}}</b> - patronus: <b>{{member.patronus}}</b>
+                    <br> <b>wand:</b> (wood: <b>{{member.wand.wood}}</b> - core: <b>{{member.wand.core}}</b> - length: <b>{{member.wand.length}})</b>
+                    <br> hogwartsStudent: <b>{{member.hogwartsStudent}}</b> - hogwartsStaff: <b>{{member.hogwartsStaff}}</b>
+                    <br> actor: <b>{{member.actor}}</b></b>
+                </p>
+                <img *ngIf="member.ancestry" src="assets/img/{{member.ancestry}}.png" width="50" height="50" alt="" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>
